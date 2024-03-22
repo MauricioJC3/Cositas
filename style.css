@@ -1,0 +1,65 @@
+body {
+    font-family: 'Pacifico', cursive;
+    background: linear-gradient(45deg, #ff66b2, #ffccff);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    overflow: hidden;
+    }
+
+    #container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    }
+
+    h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    }
+
+    #hearts {
+    font-size: 2em;
+    color: #fff;
+    animation: hearts 1s infinite;
+    }
+
+    @keyframes hearts {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    }
+
+    .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+    0% {
+        transform: translateY(-100vh);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+    }
+
+    @media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    #hearts {
+        font-size: 1.5em;
+    }
+    }
